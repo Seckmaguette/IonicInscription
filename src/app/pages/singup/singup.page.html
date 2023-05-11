@@ -1,0 +1,60 @@
+<ion-header class="ion-no-border" [translucent]="true">
+  <ion-toolbar>
+  </ion-toolbar>
+  <ion-buttons  slot="start"></ion-buttons>
+<ion-back-button class="fleche" defaultHref="login"></ion-back-button>
+
+</ion-header>
+
+<ion-content class="bg-color" [fullscreen]="true">
+  <ion-card class="ion-no-margin">
+    <ion-card-header>
+
+      <ion-card-title>
+        Sign Up
+      </ion-card-title>
+      <ion-card-subtitle>
+        Create Your accounter by feeling up the form
+      </ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-icon name="person-outline"> </ion-icon>
+        <ion-input name="names" type="text" [(ngModel)]="fullName"  placeholder="Fullname">
+         
+        </ion-input>
+       
+
+      </ion-item>
+      <ion-item>
+        <ion-icon name="call-outline"> </ion-icon>
+        <ion-input name="names" type="text" [(ngModel)]="phoneNo" placeholder="Phone no">
+        </ion-input>
+        
+      </ion-item>
+      <ion-item>
+        <ion-icon name="mail-outline"> </ion-icon>
+        <ion-input name="email" type="text" [(ngModel)]="email" placeholder="Email">
+        </ion-input>
+       
+      </ion-item>
+      <div class="sign-btn-wrap">
+        <ion-button fill="solid" shape="round" class="sign-btn" (click)="navigateToNewPage()">Sign Up</ion-button>
+      </div>
+      <div class="text-tag">
+        <span>Sign Up with</span>
+    </div>
+    <div class="social-btns">
+      <ion-button fill="clear" class="facebookbtn ion-no-padding" >
+        <ion-img src="assets/images/facebook.png"></ion-img>
+      </ion-button>
+      <ion-button fill="clear" class="googlebtn ion-no-padding" >
+        <ion-img src="assets/images/google.png"></ion-img>
+      </ion-button>
+      <ion-button fill="clear" class="applebtn ion-no-padding" >
+        <ion-img src="assets/images/apple.png"></ion-img>
+      </ion-button>
+    </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
