@@ -6,7 +6,8 @@
 
 <ion-content class="bg-color" [fullscreen]="true">
 <ion-card>
-  <ion-img src="assets/images/accueil.png"></ion-img>
+  <ion-img [src]="profilePictureUrl" *ngIf="profilePictureUrl"></ion-img>
+  <ion-img src="assets/images/header1.png"></ion-img>
   <ion-card-header>
     <ion-card-title>
       Bienvenu dans notre plateform
@@ -17,6 +18,9 @@
       <p>Fullname: {{fullName}}</p>
       <p>Phone no: {{phoneNo}}</p>
       <p>Email: {{email}}</p>
+      <img [src]="profilePictureUrl" alt="Profile Picture" *ngIf="profilePictureUrl" />
+
+
     </div>
   </ion-card-content>
 </ion-card>
@@ -27,11 +31,6 @@
       <li></li>
     </ul>
   </div> -->
- 
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">home</ion-title>
-    </ion-toolbar>
-  </ion-header>
- 
+
+
 </ion-content>

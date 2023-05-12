@@ -33,6 +33,10 @@ const routes: Routes = [
     path: 'loginscreen',
     loadChildren: () => import('./pages/loginscreen/loginscreen.module').then( m => m.LoginscreenPageModule)
   },
+  {
+    path: 'profile-photo-page',
+    loadChildren: () => import('./pages/profile-photo-page/profile-photo-page.module').then( m => m.ProfilePhotoPagePageModule)
+  },
 ];
 
 @NgModule({
