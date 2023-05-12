@@ -1,19 +1,27 @@
 ion-content{
-    --ion-backgroound-color:#E1EAF9!important;
+    --ion-background-color:#E1EAF9!important;
 }
 ion-card{
-    --ion-backgroound-color:transparent;
+    --ion-background-color:transparent;
     box-shadow: none !important;
     // .ion-no-margin{
 
     // }
+
 }
--ion-heder{
+.ion-no-border{
+  background:#E1EAF9;
+  color: #080808;
+}
+ion-header{
     position: absolute;
+    --ion-background-color:#E1EAF9!important;
+
 }
 ion-toolbar{
     --ion-backgroound-color:transparent;
     opacity: 0;
+
 }
 ion-card-title{
   margin-top: 30px;

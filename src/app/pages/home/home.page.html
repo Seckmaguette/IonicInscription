@@ -1,27 +1,30 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title></ion-title>
+    <ion-title> Bienvenu dans notre plateform</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="bg-color" [fullscreen]="true">
 <ion-card>
-  <ion-img [src]="profilePictureUrl" *ngIf="profilePictureUrl"></ion-img>
-  <ion-img src="assets/images/header1.png"></ion-img>
+  <ion-img class="accueilE" src="assets/images/im.png"></ion-img>
   <ion-card-header>
     <ion-card-title>
-      Bienvenu dans notre plateform
+      Le Forum des Etudiants
     </ion-card-title>
   </ion-card-header>
   <ion-card-content>
     <div class="EtudiantInscrit">
-      <p>Fullname: {{fullName}}</p>
-      <p>Phone no: {{phoneNo}}</p>
-      <p>Email: {{email}}</p>
-      <img [src]="profilePictureUrl" alt="Profile Picture" *ngIf="profilePictureUrl" />
+      <ion-img class="profileE" [src]="profilePictureUrl" *ngIf="profilePictureUrl"></ion-img>
 
+      <p class="listE">Fullname: {{fullName}}</p>
+      <p class="listE">Phone no: {{phoneNo}}</p>
+      <p class="listE">Email: {{email}}</p>
 
     </div>
+    <ion-item>
+      <!-- <input type="file" (change)="onFileSelected($event)"> -->
+    </ion-item>
+    <!-- <button (click)="onUpload()">Upload Photo</button> -->
   </ion-card-content>
 </ion-card>
   <!-- <div class="etudiant"> -->
