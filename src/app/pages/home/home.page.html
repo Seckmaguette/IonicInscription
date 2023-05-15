@@ -1,23 +1,34 @@
-<ion-header [translucent]="true">
+<!-- <ion-header [translucent]="true">
   <ion-toolbar>
+
     <ion-title> Bienvenu dans notre plateform</ion-title>
-  </ion-toolbar>
-</ion-header>
+    <<ion-title class="typewriter">
+
+    </ion-title> -->
+  <!-- </ion-toolbar>
+</ion-header>  -->
 
 <ion-content class="bg-color" [fullscreen]="true">
-<ion-card>
-  <ion-img class="accueilE" src="assets/images/im.png"></ion-img>
+
+
+
+  <ion-img class="accueilE" src="assets/images/profil.png"></ion-img>
+<ion-card >
+  <img class="profileE" [src]="profilePictureUrl" alt="Photo de profil">
   <ion-card-header>
     <ion-card-title>
       Le Forum des Etudiants
     </ion-card-title>
   </ion-card-header>
   <ion-card-content>
+    
     <div class="EtudiantInscrit">
-      <ion-img class="profileE" [src]="profilePictureUrl" *ngIf="profilePictureUrl"></ion-img>
+      <!-- <ion-img class="profileE" [src]="profilePictureUrl" *ngIf="profilePictureUrl"></ion-img> -->
+   
 
-      <p class="listE">Fullname: {{fullName}}</p>
-      <p class="listE">Phone no: {{phoneNo}}</p>
+
+    
+
       <p class="listE">Email: {{email}}</p>
 
     </div>

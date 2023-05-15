@@ -6,12 +6,14 @@
   <ion-back-button class="fleche1" defaultHref="login"></ion-back-button>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content class="wrapform" [fullscreen]="true">
   <ion-card class="ion-no-margin">
-    <ion-img src="assets/images/header1.png"></ion-img>
+    <ion-img class="connexion" src="assets/images/connexion.png"></ion-img>
 
-  <ion-card-content>
-  <div class="wrapform">
+  <ion-card-content >
+  
+    <form (ngSubmit)="login()">
+      <div class="wrapform1" >
     <ion-item>
       <!--  -->
       <ion-icon name="mail-outline"></ion-icon>
@@ -26,13 +28,17 @@
 
       </ion-input>
     </ion-item>
+
   </div>
-  <div class="password_forgot">
-    <ion-button fill="clear" class="ion-no-padding">ForgotPassWord </ion-button>
+ 
+  <div class="sign-btn-wrap">  
+    
+    <ion-button  type="submit" fill="solid" shape="round"  class="sign-btn" >Login</ion-button>
   </div>
-  <div class="sign-btn-wrap">
-    <ion-button fill="solid" shape="round" class="sign-btn">Login</ion-button>
-  </div>
+</form>
+<div class="password_forgot">
+  <ion-button fill="clear" class="ion-no-padding">ForgotPassWord </ion-button>
+</div>
   <div class="text-tag">
     <span>Le forum des Etudiants</span>
 </div>

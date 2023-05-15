@@ -1,30 +1,105 @@
 ion-header{
   position: absolute;
-  --ion-background-color: #1248A0;
+  // --ion-background-color:#E1EAF9!important;
+
+}
+ion-title{
+  columns: #FFF;
 }
 ion-content{
+    --ion-background-color:#DFF6F1;
+}
+ion-card{
   --ion-background-color:transparent;
+  box-shadow: none !important;
+
 }
-.bg-color{
-  background:#E1EAF9!important;
-}
-ion-card-title{
-  color: #1248A0;
-}
+// .bg-color{
+//   background:#DFF6F1;
+// }
+// ion-card-title{
+//   color: #1248A0;
+// }
 ion-toolbar{
-  color: #E1EAF9!important;
-  // color:#1248A0;
+  --ion-backgroound-color:transparent;
+  opacity: 0;
+
 }
 .accueilE{
-  padding-top: 60px;
+  // padding-top: 58px;
+
 }
 .profileE{
   margin-right: 170px;
 
 }
-.listE{
-  color: #FFF;
-  font-size: 16px;
-  background: #1248A0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+// .listE{
+//   color: #FFF;
+//   font-size: 16px;
+//   background: #DFF6F1;
+
+// }
+// #338F8E
+// annimation de texte
+// .typewriter {
+//   display: block;
+//   overflow: hidden;
+//   animation: typing 5s steps(30, end), blink-caret .5s step-end infinite;
+//   white-space: nowrap;
+//   font-size: 1.2rem;
+//   border-right: .15em solid orange;
+//   letter-spacing: .10em;
+//   margin: 0 auto;
+// }
+
+.typewriter {
+  display: block;
+  overflow: hidden;
+  animation: typing 5s steps(30, end), blink-caret .5s step-end infinite;
+  white-space: nowrap;
+  font-size: 1.2rem;
+  border-right: .15em solid #FF4500;
+  letter-spacing: .10em;
+  margin: 0 auto;
+  animation-iteration-count: infinite;
+}
+
+
+/* The typing effect */
+// @keyframes typing {
+//   from { width: 0 }
+//   to { width: 100% }
+// }
+
+// /* The typewriter caret */
+// @keyframes blink-caret {
+//   from, to { border-color: transparent }
+//   50% { border-color: orange }
+// }
+
+// .typewriter {
+//   font-size: 1.3rem;
+//   display: block;
+//   margin: 0 auto;
+//   white-space: nowrap;
+//   overflow: hidden;
+//   animation: typing 5s steps(30, end), blink-caret .5s step-end infinite;
+//   background: linear-gradient(to right, #338F8E 33%, #FFC000 66%, #E81123 100%);
+//   -webkit-background-clip: text;
+//   -webkit-text-fill-color: transparent;
+//   border-right: .15em solid orange;
+//   letter-spacing: .10em;
+//   animation-iteration-count: infinite;
+// }
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter caret */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #FF4500 }
 }

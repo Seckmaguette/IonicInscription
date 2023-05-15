@@ -1,21 +1,15 @@
 ion-content{
-    --ion-background-color:#E1EAF9!important;
+    --ion-background-color:#DFF6F1;
 }
 ion-card{
     --ion-background-color:transparent;
     box-shadow: none !important;
-    // .ion-no-margin{
-
-    // }
 
 }
-.ion-no-border{
-  background:#E1EAF9;
-  color: #080808;
-}
+
 ion-header{
     position: absolute;
-    --ion-background-color:#E1EAF9!important;
+    // --ion-background-color:#E1EAF9!important;
 
 }
 ion-toolbar{
@@ -29,6 +23,7 @@ ion-card-title{
   color:#080808;
   text-align: center;
   font-weight: 600px;
+
 
 }
 ion-card-subtitle{
@@ -45,7 +40,7 @@ font-weight: 300px;
     color:#F0F4FA;
 }
 .loginbtn{
-    --ion-color-primary:#215AB7;
+    --ion-color-primary:#5C815C;
 }
 .text-tag{
     margin-top: 40px;
@@ -53,7 +48,7 @@ font-weight: 300px;
     span{
         font-size: 13px;
         font-weight: normal;
-        color:#898585;
+        color:#5C815C;
     }
 }
 .social-btns{
@@ -62,4 +57,30 @@ font-weight: 300px;
      width: 40px;
      padding-left: 5px !important;
     }
+}
+
+
+.typewriter2 {
+  display: block;
+  overflow: hidden;
+  animation: typing 5s steps(30, end), blink-caret .5s step-end infinite;
+  white-space: nowrap;
+  font-size: 1.2rem;
+  border-right: .15em solid orange;
+  letter-spacing: .10em;
+  margin: 0 auto;
+  animation-iteration-count: infinite;
+}
+
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter caret */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange }
 }
