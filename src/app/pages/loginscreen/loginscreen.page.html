@@ -1,7 +1,5 @@
 <ion-header >
-  <ion-toolbar>
-    <!-- <ion-title>loginscreen</ion-title> -->
-  </ion-toolbar>
+  
   <ion-buttons slot="start"></ion-buttons>
   <ion-back-button class="fleche1" defaultHref="login"></ion-back-button>
 </ion-header>
@@ -12,7 +10,8 @@
 
   <ion-card-content >
   
-    <form (ngSubmit)="login()">
+    <form (ngSubmit)="login( )" >
+   
       <div class="wrapform1" >
     <ion-item>
       <!--  -->
@@ -33,7 +32,8 @@
  
   <div class="sign-btn-wrap">  
     
-    <ion-button  type="submit" fill="solid" shape="round"  class="sign-btn" >Login</ion-button>
+    <ion-button  type="submit" fill="solid" shape="round"  class="sign-btn" expand="block">Login</ion-button>
+ 
   </div>
 </form>
 <div class="password_forgot">

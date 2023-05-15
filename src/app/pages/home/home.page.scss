@@ -1,3 +1,10 @@
+.textarea{
+  width: 250px;
+  margin-top: 20px;
+  margin-right: 20px;
+  height: 80px;
+}
+
 ion-header{
   position: absolute;
   // --ion-background-color:#E1EAF9!important;
@@ -7,11 +14,11 @@ ion-title{
   columns: #FFF;
 }
 ion-content{
-    --ion-background-color:#DFF6F1;
+    --ion-background-color:#FFF;
 }
 ion-card{
   --ion-background-color:transparent;
-  box-shadow: none !important;
+   box-shadow: none !important;
 
 }
 // .bg-color{

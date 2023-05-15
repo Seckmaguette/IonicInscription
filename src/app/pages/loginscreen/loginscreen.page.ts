@@ -12,13 +12,14 @@ import { FormsModule } from '@angular/forms';
 export class LoginscreenPage implements OnInit {
 email:string;
 password:string;
-
+id="present-alert"
 // private authService:AuthService
   constructor(private router: Router,private activatedRoute:ActivatedRoute) {
     this.email="";
     this.password="";
     // this.Fullname="";
     // this.Phone="";
+    
 
         // phoneNo: this.phoneNo,
   }
@@ -41,8 +42,12 @@ password:string;
       // Si les informations d'identification sont correctes, rediriger l'utilisateur vers la page d'accueil
       this.router.navigate(['/home']);
     } else {
+      
+
+    
       // Si les informations d'identification sont incorrectes, afficher un message d'erreur
       console.log('Erreur lors de la connexion : email ou mot de passe incorrect');
+      
     }
   }
   

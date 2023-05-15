@@ -14,37 +14,52 @@
 
   <ion-img class="accueilE" src="assets/images/profil.png"></ion-img>
 <ion-card >
-  <img class="profileE" [src]="profilePictureUrl" alt="Photo de profil">
+
   <ion-card-header>
     <ion-card-title>
       Le Forum des Etudiants
     </ion-card-title>
   </ion-card-header>
   <ion-card-content>
-    
+
     <div class="EtudiantInscrit">
       <!-- <ion-img class="profileE" [src]="profilePictureUrl" *ngIf="profilePictureUrl"></ion-img> -->
-   
+<!-- pour poster -->
+      <form (ngSubmit)="submitPost()" #postForm="ngForm">
+        <textarea name="postContent" [(ngModel)]="postContent" required></textarea>
+        <button type="submit">Publier</button>
+      </form>
+<!-- La directive *ngFor permet de parcourir le tableau posts et pour chaque élément post, les balises HTML à l'intérieur de la balise div seront répétées.
+   Vous pouvez utiliser les expressions {{ }} pour afficher les propriétés de chaque post, comme le contenu (post.content) et la date (post.date). La pipe date est utilisée pour formater la date. -->
+      <div *ngFor="let post of posts">
+        <h3>{{ post.content }}</h3>
+        <p>{{ post.date | date }}</p>
+
+        <div>
+          <input type="text" [(ngModel)]="post.commentInput" placeholder="Ajouter un commentaire">
+          <button (click)="addComment(post)">Ajouter</button>
+        </div>
+
+        <ul>
+          <li *ngFor="let comment of post.comments">
+            {{ comment.content }}
+          </li>
+        </ul>
+      </div>
+<!-- fin etudiant -->
+      </div>
 
 
-    
 
-      <p class="listE">Email: {{email}}</p>
+      <!-- <p class="listE">Email: {{email}}</p> -->
 
-    </div>
+
     <ion-item>
       <!-- <input type="file" (change)="onFileSelected($event)"> -->
     </ion-item>
     <!-- <button (click)="onUpload()">Upload Photo</button> -->
   </ion-card-content>
 </ion-card>
-  <!-- <div class="etudiant"> -->
-    <!-- <ul *ngFor="let item of ">
-      <li></li>
-      <li></li>
-      <li></li>
-    </ul>
-  </div> -->
 
 
 </ion-content>
