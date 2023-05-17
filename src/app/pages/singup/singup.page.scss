@@ -94,3 +94,15 @@ font-size: 13px;
    padding-left: 5px !important;
   }
 }
+
+.container {
+  display: grid; /* ou display: flex; pour une mise en page en colonne */
+  grid-template-rows: auto 1fr; /* ou flex-direction: column; pour une mise en page en colonne */
+  height: 100%;
+}
+
+.login-button {
+  position: sticky; /* ou position: fixed; si vous souhaitez que le bouton soit fixé à une position spécifique */
+  bottom: 20px; /* ajustez cette valeur pour la position verticale souhaitée */
+  text-align: center; /* centrez le bouton horizontalement si nécessaire */
+}

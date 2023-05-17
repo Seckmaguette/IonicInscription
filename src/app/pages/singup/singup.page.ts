@@ -23,29 +23,18 @@ export class SingupPage implements OnInit {
 
 
   }
-  // onFileSelected(event) {
-  //   this.imageFile = event.target.files[0];
-  // }
-  // onFileSelected(event: any) {
-  //   this.profilePicture = event.target.files[0].name;
-  //   console.log(event.target.files[0].name);
-  // }
 
-  // onFileSelected(event: any) {
-  //   if (event.target.files && event.target.files.length > 0) {
-  //     this.profilePicture = event.target.files[0].name;
-  //     console.log(event.target.files[0].name);
-  //   }
-  // }
   onFileSelected(event: any) {
     if (event.target.files && event.target.files.length > 0) {
-      this.profilePicture = event.target.files[0].name;
-      console.log(event.target.files[0].name);
+      const reader = new FileReader();
+      reader.onload = (e: any) => {
+        this.profilePicture = e.target.result;
+      };
+      reader.readAsDataURL(event.target.files[0]);
     } else {
       this.profilePicture = "";
     }
   }
-  
   
   navigateToNewPage() {
     const navigationExtras: NavigationExtras = {
@@ -69,6 +58,7 @@ export class SingupPage implements OnInit {
     
    
   localStorage.setItem('profilePicture',this.profilePicture);
+ 
     localStorage.setItem('password',this.password)
     this.router.navigate(['/loginscreen'], navigationExtras);
     // this.router.navigate(['/home'], { queryParams: { fullName: this.fullName, phoneNo: this.phoneNo, email: this.email } });

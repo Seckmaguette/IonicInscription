@@ -29,6 +29,10 @@
             <textarea name="postContent" [(ngModel)]="postContent" required></textarea>
             <button type="submit">Publier</button>
           </form> 
+            <!-- Avatar de l'utilisateur -->
+            <ion-avatar>
+              <ion-img [src]="profilePicture" style="width: 180px; height: 50px; right: 0;"></ion-img>
+            </ion-avatar>
           <!-- Contenu du poste -->
           <h3>{{ post.content }}</h3>
           <p>{{ post.date | date }}</p>
