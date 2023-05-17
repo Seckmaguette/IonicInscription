@@ -1,10 +1,30 @@
 .textarea{
-  width: 250px;
+  width:500px;
   margin-top: 20px;
-  margin-right: 20px;
+  // margin-right: 60px;
   height: 80px;
 }
+textarea[name="postContent"],
+input[type="text"] {
+  border: 2px solid #5C815C; /* Remplacez "red" par la couleur de bordure souhaitée */
+}
+.sama-card{
+  border: 2px solid #5C815C;
+  background-color: #ffffff; /* Couleur de fond de la carte (blanc dans cet exemple) */
+  box-shadow: 4px 8px 4px rgba(0, 0, 0, 0.1); /* Ombre de la carte (ajustez les valeurs selon vos préférences) */
+  padding: 16px; /* Marge intérieure pour créer de l'espace entre les éléments à l'intérieur de la carte */
+}
 
+
+
+
+
+.bg-color{
+  background-image: url('/assets/images/fond.png');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.8;
+}
 ion-header{
   position: absolute;
   // --ion-background-color:#E1EAF9!important;

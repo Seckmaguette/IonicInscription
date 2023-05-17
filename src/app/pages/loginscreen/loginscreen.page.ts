@@ -3,6 +3,7 @@ import { NgModel } from '@angular/forms';
 import { Router, NavigationExtras} from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { AlertController } from '@ionic/angular';
 // import { AuthService } from 'src/app/services/auth.service';
 @Component({
   selector: 'app-loginscreen',
@@ -14,18 +15,18 @@ email:string;
 password:string;
 id="present-alert"
 // private authService:AuthService
-  constructor(private router: Router,private activatedRoute:ActivatedRoute) {
+  constructor(private router: Router,private activatedRoute:ActivatedRoute,private alertController:AlertController) {
     this.email="";
     this.password="";
     // this.Fullname="";
     // this.Phone="";
-    
+
 
         // phoneNo: this.phoneNo,
   }
   // onSubmit() {
   //   const loggedIn = this.authService.login(this.email, this.password);
-  
+
   //   if (loggedIn) {
   //     // Si les informations d'identification sont correctes, redirigez l'utilisateur vers la page d'accueil
   //     this.router.navigate(['/accueil']);
@@ -36,21 +37,33 @@ id="present-alert"
   // }
 
 // informations des données venants de la page inscription
-  login() {
+async login() {
     // Vérifier si les informations d'identification de l'utilisateur sont correctes
     if (this.email === localStorage.getItem('email') && this.password === localStorage.getItem('password')) {
       // Si les informations d'identification sont correctes, rediriger l'utilisateur vers la page d'accueil
       this.router.navigate(['/home']);
-    } else {
-      
 
-    
+
+    } else {
+
+      const alert = await this.alertController.create({
+        header: 'Erreur de connexion',
+        message: 'Email ou mot de passe incorrect',
+        buttons: ['OK'],
+        // cssClass:'changerMoi'
+
+      });
+
+      await alert.present();
+
+
+
       // Si les informations d'identification sont incorrectes, afficher un message d'erreur
       console.log('Erreur lors de la connexion : email ou mot de passe incorrect');
-      
+
     }
   }
-  
+
   // fin
 
   // navigateToNewPage() {
