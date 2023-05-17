@@ -60,7 +60,21 @@ export class SingupPage implements OnInit {
   localStorage.setItem('email', this.email);
 
 
-  localStorage.setItem('profilePicture',this.profilePicture);
+  // localStorage.setItem('profilePicture',this.profilePicture);
+  // Vérifier si une nouvelle photo de profil a été sélectionnée
+  if (this.profilePicture) {
+    // Générer un identifiant unique pour la nouvelle photo
+    const profilePictureId = 'profile_picture_' + Date.now().toString();
+
+    // Enregistrer le chemin de la nouvelle photo de profil dans le local storage
+    localStorage.setItem(profilePictureId, this.profilePicture);
+
+    // Enregistrer l'identifiant de la nouvelle photo de profil comme photo de profil actuelle
+    localStorage.setItem('currentProfilePictureId', profilePictureId);
+  }
+
+
+
 
     localStorage.setItem('password',this.password)
     this.router.navigate(['/loginscreen'], navigationExtras);
@@ -70,6 +84,8 @@ export class SingupPage implements OnInit {
 
 
   ngOnInit() {
+
+
   }
 
 
