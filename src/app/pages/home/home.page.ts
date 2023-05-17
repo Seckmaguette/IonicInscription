@@ -11,7 +11,8 @@ export class HomePage implements OnInit {
   postContent: string = '';
   posts: any[] = [];
   profilePicture: string = "";
-
+  fullName:string=""
+// activatedRoute permet de recuper les données venant d'un autre route
   constructor(private route: ActivatedRoute) {}
 
   submitPost() {
@@ -27,7 +28,7 @@ export class HomePage implements OnInit {
     // Enregistrez le tableau des posts dans le local storage
     localStorage.setItem('posts', JSON.stringify(this.posts));
 
-    // Réinitialisez le contenu du formulaire
+    // Réinitialisez le contenu du formulaire pour lui permettre de prendre encore du contenu
     this.postContent = '';
   }
 
@@ -44,6 +45,9 @@ export class HomePage implements OnInit {
   ngOnInit() {
     // Récupérer l'avatar depuis le local storage
     this.profilePicture = localStorage.getItem('profilePicture') || "";
+    this.fullName = localStorage.getItem('fullName') || '';
+
+
 
     // Récupérer les posts depuis le local storage
     const storedPosts = localStorage.getItem('posts');

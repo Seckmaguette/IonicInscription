@@ -28,21 +28,25 @@
           <form (ngSubmit)="submitPost()" #postForm="ngForm">
             <textarea name="postContent" [(ngModel)]="postContent" required></textarea>
             <button type="submit">Publier</button>
-          </form> 
+          </form>
             <!-- Avatar de l'utilisateur -->
+            <div class="post-content">
+
             <ion-avatar>
-              <ion-img [src]="profilePicture" style="width: 180px; height: 50px; right: 0;"></ion-img>
+              <ion-img class="profile-picture " [src]="profilePicture" style="width: 180px; height: 50px; "></ion-img>
             </ion-avatar>
+            <h3 class="username">{{fullName}}</h3>
+          </div>
           <!-- Contenu du poste -->
           <h3>{{ post.content }}</h3>
           <p>{{ post.date | date }}</p>
-      
+
           <!-- Formulaire de commentaire -->
           <div>
             <input type="text" [(ngModel)]="post.commentInput" placeholder="Ajouter un commentaire">
             <button (click)="addComment(post)">Ajouter</button>
           </div>
-      
+
           <!-- Liste des commentaires -->
           <ul>
             <li *ngFor="let comment of post.comments">
@@ -51,7 +55,7 @@
           </ul>
         </ion-card>
       </ng-container>
-      
+
       <!-- <ion-img class="profileE" [src]="profilePictureUrl" *ngIf="profilePictureUrl"></ion-img> -->
 <!-- pour poster -->
 <!-- <ng-container *ngFor="let post of posts">
@@ -74,7 +78,7 @@
         <ul>
           <li *ngFor="let comment of post.comments">
             {{ comment.content }}
-          </li> 
+          </li>
          </ul>
       </div>
     </ion-card>

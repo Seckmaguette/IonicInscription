@@ -1,8 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+// NgModel recupere les données saisient au niveau du champ de formulaire
 import { NgModel } from '@angular/forms';
+//  avigationExtras nous permet de transférer les données à partir du routeur par l'interface NavigationExtras
 import { Router, NavigationExtras} from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+// importer AlertController  nous permet d'utilsé les allertes
 import { AlertController } from '@ionic/angular';
 // import { AuthService } from 'src/app/services/auth.service';
 @Component({
@@ -13,28 +16,13 @@ import { AlertController } from '@ionic/angular';
 export class LoginscreenPage implements OnInit {
 email:string;
 password:string;
-id="present-alert"
-// private authService:AuthService
+
+// pour fiare injection de dépendance  il faut faire private le NomDeInjection ensuite AlertController
   constructor(private router: Router,private activatedRoute:ActivatedRoute,private alertController:AlertController) {
     this.email="";
     this.password="";
-    // this.Fullname="";
-    // this.Phone="";
 
-
-        // phoneNo: this.phoneNo,
   }
-  // onSubmit() {
-  //   const loggedIn = this.authService.login(this.email, this.password);
-
-  //   if (loggedIn) {
-  //     // Si les informations d'identification sont correctes, redirigez l'utilisateur vers la page d'accueil
-  //     this.router.navigate(['/accueil']);
-  //   } else {
-  //     // Si les informations d'identification sont incorrectes, affichez un message d'erreur
-  //     console.log('Erreur lors de la connexion');
-  //   }
-  // }
 
 // informations des données venants de la page inscription
 async login() {
@@ -45,43 +33,22 @@ async login() {
 
 
     } else {
-
+// pour utiliser les allertes il faut u
+// l'injection de dépendance alertController permet faire ce qu'on veut faire sur l'alerte
       const alert = await this.alertController.create({
         header: 'Erreur de connexion',
         message: 'Email ou mot de passe incorrect',
         buttons: ['OK'],
-        // cssClass:'changerMoi'
+        
 
       });
 
       await alert.present();
 
-
-
-      // Si les informations d'identification sont incorrectes, afficher un message d'erreur
-      console.log('Erreur lors de la connexion : email ou mot de passe incorrect');
-
     }
   }
 
   // fin
-
-  // navigateToNewPage() {
-  //   const navigationExtras: NavigationExtras = {
-  //     queryParams: {
-  //       // fullName: this.fullName,
-  //       // phoneNo: this.phoneNo,
-  //       email: this.email,
-  //       password: this.password,
-  //       // Fullname:this.Fullname,
-  //       // Phone:this.Phone,
-  //       // profilePicture: this.profilePicture,
-  //     },
-  //   };
-  //   this.router.navigate(['/home'], navigationExtras);
-  //   // this.router.navigate(['/home'], { queryParams: { fullName: this.fullName, phoneNo: this.phoneNo, email: this.email } });
-  // }
-
   ngOnInit() {
 
   }

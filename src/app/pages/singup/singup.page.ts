@@ -14,6 +14,7 @@ export class SingupPage implements OnInit {
   profilePicture: string = "";
 
   // profilePicture: File | undefined = undefined;
+  // router nous permet d'envoyer les données dans une autre route définit
   constructor(private router: Router) {
     this.fullName=""
     this.phoneNo=""
@@ -23,7 +24,8 @@ export class SingupPage implements OnInit {
 
 
   }
-
+  // cette code concerne les phots
+  // de la sellectionner,charger s'il y'en a et de la lire  sinon la proprieté  qui stock le photo sera vide
   onFileSelected(event: any) {
     if (event.target.files && event.target.files.length > 0) {
       const reader = new FileReader();
@@ -35,8 +37,9 @@ export class SingupPage implements OnInit {
       this.profilePicture = "";
     }
   }
-  
+// navigateToNewPage nous dirige vers une autre page
   navigateToNewPage() {
+    // NavigationExtras nous permet de transférer les données à partir du routeur
     const navigationExtras: NavigationExtras = {
       queryParams: {
         fullName: this.fullName,
@@ -46,19 +49,19 @@ export class SingupPage implements OnInit {
         profilePicture: this.profilePicture,
       },
     };
-     
+
 // Sauvegarder les informations d'identification dans le localStorage
   localStorage.setItem('fullName', this.fullName);
-  
- 
+
+
   localStorage.setItem('phoneNo', this.phoneNo);
-    
-   
+
+
   localStorage.setItem('email', this.email);
-    
-   
+
+
   localStorage.setItem('profilePicture',this.profilePicture);
- 
+
     localStorage.setItem('password',this.password)
     this.router.navigate(['/loginscreen'], navigationExtras);
     // this.router.navigate(['/home'], { queryParams: { fullName: this.fullName, phoneNo: this.phoneNo, email: this.email } });
