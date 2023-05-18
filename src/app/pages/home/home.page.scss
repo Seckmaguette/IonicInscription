@@ -6,16 +6,17 @@
 }
 textarea[name="postContent"],
 input[type="text"] {
-  border: 2px solid #5C815C; /* Remplacez "red" par la couleur de bordure souhaitée */
-  border-radius: 10%;
+  border: 1px solid black; /* Remplacez "red" par la couleur de bordure souhaitée */
+  border-radius: 5px;
   box-shadow: 2px 4px 2px rgba(0, 0, 0, 0.1);
   font-family: 'Open Sans', sans-serif;
 }
 .sama-card{
-  border-radius: 10%;
-  border: 1px solid #5C815C;
+  // margin: 0 auto;
+  border-radius: 5px;
+  border: 1px solid black;
   background-color: #ffffff; /* Couleur de fond de la carte (blanc dans cet exemple) */
-  box-shadow: 2px 4px 2px rgba(0, 0, 0, 0.1); /* Ombre de la carte (ajustez les valeurs selon vos préférences) */
+  box-shadow: 25px 12px 4px 10px rgba(0, 0, 0, 0.1); /* Ombre de la carte (ajustez les valeurs selon vos préférences) */
   padding: 16px; /* Marge intérieure pour créer de l'espace entre les éléments à l'intérieur de la carte */
 }
 
@@ -166,3 +167,20 @@ ion-toolbar{
 //   font-family: 'Montserrat-Medium', sans-serif;
 //   font-size: 24px;
 // }
+.video-container {
+  width: 100%;
+  height: auto;
+}
+.custom-file-upload {
+  display: inline-block;
+  padding: 6px 12px;
+  cursor: pointer;
+  background-color: #5C815C;
+  color:#ccc;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.custom-file-upload:hover {
+  background-color: #e9e9e9;
+}

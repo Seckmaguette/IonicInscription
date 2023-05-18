@@ -20,12 +20,15 @@ onFileSelected(event: any, post: any) {
   // post.selectedImage = URL.createObjectURL(this.selectedFile);
   if (this.selectedFile !== null) {
     post.selectedImage = URL.createObjectURL(this.selectedFile);
+    post.selectedVideo = URL.createObjectURL(this.selectedFile);
   } else {
 
     // Gérer le cas où this.selectedFile est nul (null)
   }
 
 }
+
+
 // activatedRoute permet de recuper les données venant d'un autre route
   constructor(private route: ActivatedRoute) {}
     updateElapsedTime() {
@@ -46,6 +49,8 @@ onFileSelected(event: any, post: any) {
         content: this.postContent,
         image: this.selectedFile ? URL.createObjectURL(this.selectedFile) : null,
         date: new Date(),
+        video: this.selectedFile ? URL.createObjectURL(this.selectedFile) : null,
+        // video: post.selectedVideo ? post.selectedVideo : null,
         isNew: true // Ajoutez la propriété 'isNew' à true pour marquer la nouvelle publication
       };
 
